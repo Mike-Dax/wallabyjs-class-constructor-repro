@@ -1,0 +1,112 @@
+{
+  "devDependencies": {
+    "prettier": "^3.4.2"
+  },
+  "workspaces": [
+    "packages/*",
+    "test/*",
+    "templates/instant",
+    "templates/electron-sandbox",
+    "templates/node-sandbox",
+    "templates/template-electron",
+    "templates/template-node",
+    "tools/*"
+  ],
+  "name": "electricui-interface",
+  "version": "0.1.5",
+  "description": "ElectricUI Monorepo",
+  "main": "index.js",
+  "author": "Electric UI <support@electricui.com> (https://electricui.com)",
+  "license": "UNLICENSED",
+  "private": true,
+  "resolutions": {
+    "handlebars": "4.5.0",
+    "node-abi": "2.30.0",
+    "get-intrinsic": "1.0.1",
+    "fsevents": "2.3.2",
+    "@serialport/bindings": "9.2.0",
+    "three": "0.174.0",
+    "chokidar": "3.5.3",
+    "app-builder-lib": "23.3.1",
+    "caniuse-lite": "1.0.30001335",
+    "three-stdlib": "2.35.14",
+    "puppeteer": "23.10.1",
+    "webpack": "^5.101.3",
+    "react": "18.3.1",
+    "react-compiler-runtime": "19.1.0-rc.2",
+    "@babel/runtime": "7.26.0",
+    "react-dom": "18.3.1",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "@types/node": "22.9.0",
+    "@react-three/drei/three-mesh-bvh": "workspace:packages/three-mesh-bvh"
+  },
+  "dependencies": {
+    "@eslint/js": "9.33.0",
+    "@types/three": "0.174.0",
+    "eslint": "9.33.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-react-compiler": "19.1.0-rc.2",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "prettier": "^3.4.2",
+    "tslib": "^2.8.1",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.40.0",
+    "vitest": "^3.2.4"
+  },
+  "dependenciesMeta": {
+    "@react-spring/rafz@9.5.5": {
+      "unplugged": true
+    },
+    "@rushstack/node-core-library@3.62.0": {
+      "unplugged": true
+    },
+    "core-js-compat@3.15.2": {
+      "unplugged": true
+    },
+    "dmg-builder": {
+      "unplugged": true
+    },
+    "electron": {
+      "unplugged": true
+    },
+    "lodash.zip@4.2.0": {
+      "unplugged": true
+    },
+    "open@7.3.0": {
+      "unplugged": true
+    },
+    "open@7.3.1": {
+      "unplugged": true
+    },
+    "open@8.4.0": {
+      "unplugged": true
+    },
+    "remotion@4.0.12": {
+      "unplugged": true
+    },
+    "spectron@15.0.0": {
+      "unplugged": true
+    },
+    "webdriver@6.12.1": {
+      "unplugged": true
+    },
+    "webdriver@7.7.7": {
+      "unplugged": true
+    },
+    "webdriverio@6.12.1": {
+      "unplugged": true
+    },
+    "webdriverio@7.7.8": {
+      "unplugged": true
+    },
+    "webpack-dev-server": {
+      "unplugged": true
+    }
+  },
+  "scripts": {
+    "build": "yarn workspaces foreach -Avp --topological-dev --no-private run build",
+    "test": "yarn workspaces foreach -Avp --no-private run test"
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
+}

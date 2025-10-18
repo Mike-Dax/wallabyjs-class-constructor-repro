@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "target": "esnext",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "moduleResolution": "bundler",
+    "sourceMap": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "outDir": "./lib"
+  },
+  "include": ["src/**/*", "test/**/*", "index.ts"]
+}

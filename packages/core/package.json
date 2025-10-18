@@ -1,0 +1,49 @@
+{
+  "name": "@electricui/core",
+  "version": "0.9.8",
+  "description": "ElectricUI Core",
+  "electricui-dev": true,
+  "author": "Electric UI <support@electricui.com> (https://electricui.com)",
+  "license": "SEE LICENCE IN LICENCE",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "publishConfig": {
+    "main": "lib/cjs/index.eui.js",
+    "module": "lib/esm/index.eui.js"
+  },
+  "sideEffects": true,
+  "types": "lib/types/index.d.ts",
+  "files": [
+    "lib/**/*",
+    "manifest.json"
+  ],
+  "dependencies": {
+    "@electricui/async-utilities": "workspace:*",
+    "@electricui/timing": "workspace:*"
+  },
+  "devDependencies": {
+    "@electricui/build-rollup-config": "workspace:*",
+    "@types/node": "22.9.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/runner": "^3.2.4",
+    "@vitest/snapshot": "^3.2.4",
+    "eslint": "9.33.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-react-compiler": "19.1.0-rc.2",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "rollup": "4.50.2",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.40.0",
+    "vitest": "^3.2.4"
+  },
+  "scripts": {
+    "build": "rm -rf ./lib && rollup -c --bundleConfigAsCjs",
+    "test": "vitest run --typecheck",
+    "test:watch": "vitest --typecheck",
+    "test:watch:notypes": "vitest",
+    "test:inspect": "node --inspect-brk $(yarn bin vitest --no-file-parallelism --test-timeout=0)",
+    "test:coverage": "vitest run --coverage"
+  }
+}
