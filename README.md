@@ -1,0 +1,1 @@
+# wallabyjs-class-constructor-repro
