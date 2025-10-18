@@ -17,10 +17,6 @@
     "lib/**/*",
     "manifest.json"
   ],
-  "dependencies": {
-    "@electricui/async-utilities": "workspace:*",
-    "@electricui/timing": "workspace:*"
-  },
   "devDependencies": {
     "@electricui/build-rollup-config": "workspace:*",
     "@types/node": "22.9.0",
